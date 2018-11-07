@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { IProduct } from "./product";
+import { productService } from "./productService";
 
 @Component({
     selector:'pm-products',
@@ -13,8 +14,7 @@ export class ProductListComponent implements OnInit{
     showImage : boolean = false;
     filteredProducts: IProduct[];
     
-    constructor() {
-        this.filteredProducts = this.products;
+    constructor(private productService: productService) {
         this.listFilter = 'cart';
     }
 
@@ -51,7 +51,8 @@ export class ProductListComponent implements OnInit{
         this.showImage = !this.showImage;
     }
     ngOnInit(): void {
-        console.log('OnInit');
+        this.products = this.productService.getProducts();
+                this.filteredProducts = this.products;
     }
     perfromFilter(filterBy : string ) : IProduct[] {
         filterBy = filterBy.toLocaleLowerCase();
