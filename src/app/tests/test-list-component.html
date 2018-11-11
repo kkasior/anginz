@@ -17,7 +17,7 @@
         </div>
         <div class="table-responsive">
             <table class="table"
-            *ngIf='products && products.length'>
+            *ngIf='tests && tests.length'>
                 <thead>
                     <tr>
                         <th>
@@ -26,7 +26,7 @@
                             {{showImage ? 'Hide' : 'Show'}} Image
                             </button>
                         </th>
-                        <th>Product</th>
+                        <th>test</th>
                         <th>Code</th>
                         <th>Available</th>
                         <th>Price</th>
@@ -34,19 +34,19 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor = 'let product of filteredProducts'>
+                    <tr *ngFor = 'let test of filteredtests'>
                         <td>
                             <img *ngIf='showImage'
-                            [src]='product.imageUrl'
-                            [title]='product.productName'
+                            [src]='test.imageUrl'
+                            [title]='test.testName'
                             [style.margin.px]='imageMargin'
                             [style.width.px]='imageWidth'>
                         </td>
-                        <td><a [routerLink]="['/products', product.productId]">{{product.productName}}</a></td>
-                        <td>{{product.productCode | lowercase | convertToSpraces:'-' }}</td>
-                        <td>{{product.releaseDate}}</td>
-                        <td>{{product.price | currency:'USD':'symbol':'1.2-2'}}</td>
-                        <td><pm-star [rating]='product.starRating'
+                        <td><a [routerLink]="['/tests', test.testId]">{{test.testName}}</a></td>
+                        <td>{{test.testCode | lowercase | convertToSpraces:'-' }}</td>
+                        <td>{{test.releaseDate}}</td>
+                        <td>{{test.price | currency:'USD':'symbol':'1.2-2'}}</td>
+                        <td><pm-star [rating]='test.starRating'
                                      (ratingClicked)='onRatingClicked($event)'></pm-star></td>
                     </tr>
                 </tbody>

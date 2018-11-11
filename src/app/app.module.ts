@@ -2,11 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
-import { ProductListComponent } from './products/product-list-component';
+import { testListComponent } from './tests/test-list-component';
 import { ConvertToSpacesPipe } from './shared/convert-to-spaces.pipe';
 import { StarComponent } from './shared/star-component';
 import { HttpClientModule } from '@angular/common/http';
-import { ProductDetailComponent } from './products/product-detail.component';
+import { testDetailComponent } from './tests/test-detail.component';
 import { WelcomeComponent } from './home/welcome.component';
 import { RouterModule } from '@angular/router';
 
@@ -14,10 +14,10 @@ import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
     AppComponent,
-    ProductListComponent,
+    testListComponent,
     ConvertToSpacesPipe,
     StarComponent,
-    ProductDetailComponent,
+    testDetailComponent,
     WelcomeComponent
   ],
   imports: [
@@ -25,8 +25,8 @@ import { RouterModule } from '@angular/router';
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot([
-      { path: 'products', component: ProductListComponent },
-      { path: 'products/:id', component: ProductDetailComponent },
+      { path: 'tests', component: testListComponent },
+      { path: 'tests/:id', component: testDetailComponent },
       { path: 'welcome', component: WelcomeComponent },
       { path: '', redirectTo: 'welcome', pathMatch: 'full' },
       { path: '**', redirectTo: 'welcome', pathMatch: 'full' }

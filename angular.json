@@ -29,7 +29,7 @@
             "scripts": []
           },
           "configurations": {
-            "production": {
+            "testion": {
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -54,8 +54,8 @@
             "browserTarget": "APM:build"
           },
           "configurations": {
-            "production": {
-              "browserTarget": "APM:build:production"
+            "testion": {
+              "browserTarget": "APM:build:testion"
             }
           }
         },
@@ -107,8 +107,8 @@
             "devServerTarget": "APM:serve"
           },
           "configurations": {
-            "production": {
-              "devServerTarget": "APM:serve:production"
+            "testion": {
+              "devServerTarget": "APM:serve:testion"
             }
           }
         },

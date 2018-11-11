@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { IProduct } from "./product";
+import { Itest } from "./test";
 import { HttpClient, HttpErrorResponse } from "@angular/common/http";
 import { Observable, throwError } from "rxjs";
 import { catchError, tap, map } from 'rxjs/operators';
@@ -7,20 +7,20 @@ import { catchError, tap, map } from 'rxjs/operators';
 @Injectable({
     providedIn: 'root'
 })
-export class productService{
+export class testService{
 
-  private productUrl = 'api/products/products.json'
+  private testUrl = 'api/tests/tests.json'
   constructor(private http : HttpClient) {
   }
-    getProducts(): Observable<IProduct[]>{
-      return this.http.get<IProduct[]>(this.productUrl).pipe(
+    gettests(): Observable<Itest[]>{
+      return this.http.get<Itest[]>(this.testUrl).pipe(
         tap(data=>console.log('All: ' + JSON.stringify(data))),
         catchError(this.handleError)
       );
     }
-    getProduct(id: number): Observable<IProduct | undefined> {
-      return this.getProducts().pipe(
-        map((products: IProduct[]) => products.find(p => p.productId === id))
+    gettest(id: number): Observable<Itest | undefined> {
+      return this.gettests().pipe(
+        map((tests: Itest[]) => tests.find(p => p.testId === id))
       );
     }
     private handleError(err: HttpErrorResponse) {
