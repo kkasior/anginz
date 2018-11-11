@@ -21,33 +21,21 @@
                 <thead>
                     <tr>
                         <th>
-                            <button class="btn btn-primary"
-                            (click)='toggleImage()'>
-                            {{showImage ? 'Hide' : 'Show'}} Image
-                            </button>
+                            ID
                         </th>
-                        <th>test</th>
-                        <th>Code</th>
-                        <th>Available</th>
-                        <th>Price</th>
-                        <th>5 Star Rating</th>
+                        <th>Test Name</th>
+                        <th>projectName</th>
+                        <th>Tester</th>
+                        <th>Solution Path</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr *ngFor = 'let test of filteredtests'>
-                        <td>
-                            <img *ngIf='showImage'
-                            [src]='test.imageUrl'
-                            [title]='test.testName'
-                            [style.margin.px]='imageMargin'
-                            [style.width.px]='imageWidth'>
-                        </td>
+                        <td>{{test.testId}}</td>
                         <td><a [routerLink]="['/tests', test.testId]">{{test.testName}}</a></td>
-                        <td>{{test.testCode | lowercase | convertToSpraces:'-' }}</td>
-                        <td>{{test.releaseDate}}</td>
-                        <td>{{test.price | currency:'USD':'symbol':'1.2-2'}}</td>
-                        <td><pm-star [rating]='test.starRating'
-                                     (ratingClicked)='onRatingClicked($event)'></pm-star></td>
+                        <td>{{test.projectName }}</td>
+                        <td>{{test.tester}}</td>
+                        <td>{{test.solutionPath}}</td>
                     </tr>
                 </tbody>
             </table>
