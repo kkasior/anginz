@@ -1,0 +1,12 @@
+[
+    {
+      "testId": 1,
+      "step1": "qwe",
+      "result1": "asd"
+    },
+    {
+      "testId": 2,
+      "step1": "zxc",
+      "result1": "xyz"
+    }
+  ]

@@ -16,5 +16,5 @@ import { Component } from "@angular/core";
     `
 })
 export class AppComponent {
-  pageTitle: string = 'Acme test Management';  
+  pageTitle: string = 'Test environment with Selenium';  
 }
