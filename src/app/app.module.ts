@@ -9,7 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { testDetailComponent } from './tests/test-detail.component';
 import { WelcomeComponent } from './home/welcome.component';
 import { RouterModule } from '@angular/router';
-
+import { PresentationComponent } from './presentation/presentation.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,8 @@ import { RouterModule } from '@angular/router';
     ConvertToSpacesPipe,
     StarComponent,
     testDetailComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    PresentationComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,6 +29,7 @@ import { RouterModule } from '@angular/router';
       { path: 'tests', component: testListComponent },
       { path: 'tests/:id', component: testDetailComponent },
       { path: 'welcome', component: WelcomeComponent },
+      { path: 'presentation', component: PresentationComponent },
       { path: '', redirectTo: 'welcome', pathMatch: 'full' },
       { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
     ])
