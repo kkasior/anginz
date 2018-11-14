@@ -7,4 +7,5 @@ export interface Itest {
     affectedBy: string; 
     additionalInfo: string;
     testData: string; 
+    testStatus: string;
 }

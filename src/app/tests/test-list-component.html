@@ -20,13 +20,12 @@
             *ngIf='tests && tests.length'>
                 <thead>
                     <tr>
-                        <th>
-                            ID
-                        </th>
+                        <th>ID</th>
                         <th>Test Name</th>
                         <th>projectName</th>
                         <th>Tester</th>
                         <th>Solution Path</th>
+                        <th>Status</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -36,6 +35,7 @@
                         <td>{{test.projectName }}</td>
                         <td>{{test.tester}}</td>
                         <td>{{test.solutionPath}}</td>
+                        <td>{{test.testStatus}}</td>
                     </tr>
                 </tbody>
             </table>
