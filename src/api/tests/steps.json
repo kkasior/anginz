@@ -1,8 +1,22 @@
 [
     {
       "testId": 1,
-      "step1": "qwe",
-      "result1": "asd"
+      "step1": "Open Blog Page (www.testingblog.com)",
+      "result1": "Blog Page is opened, user is able to see list of latest posts",
+      "step2": "Select first post from post list – click post’s title",
+      "result2": "User is successfully redirected to selected post’s page",
+      "step3": "Scroll page to “Leave a Reply“ section",
+      "result3": "“Leave a Reply” section is visible and form of adding a comment is visible as well",
+      "step4": "In “Comment” text box, type comment content – could be “message from UI test”",
+      "result4": "Typed text is visible inside “Comment” text field",
+      "step5": "In “Name” text box, type name of user – could be “Test User”",
+      "result5": "Typed name is visible inside “Name” text field",
+      "step6": "In “Email” text box, type email address of user – could be testuser@email.com",
+      "result6": "Typed email is visible inside “Email” text field",
+      "step7": "Click on red, “Post Comment” button to finish commenting ",
+      "result7": "Current page should be refreshed",
+      "step8": "Scroll up a little, just above “Leave a Reply” section",
+      "result8": "Latest added comment should be visible above “Leave a Reply” section, it also should contains data given in steps 4-6"
     },
     {
       "testId": 2,

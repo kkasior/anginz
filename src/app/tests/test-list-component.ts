@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { Itest } from "./test";
 import { testService } from "./testService";
 import { error } from "util";
+import { stringify } from "@angular/core/src/util";
 
 @Component({
     selector:'pm-tests',
@@ -17,7 +18,7 @@ export class testListComponent implements OnInit{
     errorMessage : string;
     
     constructor(private testService: testService) {
-        this.listFilter = 'cart';
+        this.listFilter = '';
     }
 
     _listFilter : string;

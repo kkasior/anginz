@@ -1,6 +1,9 @@
 export interface Itest {
     testId: number;
-    testName: string; 
+    testName: string;
+    given: string,
+    when: string,
+    then: string,
     projectName: string;
     tester: string;
     solutionPath: string;

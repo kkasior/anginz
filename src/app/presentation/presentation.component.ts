@@ -9,12 +9,14 @@ import { Chart } from 'chart.js';
 export class PresentationComponent implements OnInit {
 
 
-  chart = [];
+  automatedBySprintChart = [];
+  loginAuthenticationChart = [];
+  imageProviderChar = [];
   constructor() { }
   
 
   ngOnInit() {
-       this.chart = new Chart('canvas', {
+      this.automatedBySprintChart = new Chart('automatedBySprintChart', {
       type: 'line',
       data: {
         labels: ['a','b','c','d','e','f','g','h'],
@@ -28,7 +30,32 @@ export class PresentationComponent implements OnInit {
           }
         ], 
       } 
-      
+    })
+    this.loginAuthenticationChart = new Chart('loginAuthenticationChart', {
+      type: 'pie',
+      data: {
+        labels: ['a','b','c','d'],
+        datasets: [
+          {
+            label: 'My first DP',
+            backgroundColor: ['red', 'blue', 'green', 'grey'],
+            data: [1,3,5,10]
+          }
+        ], 
+      } 
+    })
+    this.imageProviderChar = new Chart('imageProviderChart', {
+     type: 'pie',
+      data: {
+       labels: ['a','b','c','d'],
+       datasets: [
+         {
+           label: 'My first DP',
+           backgroundColor: ['red', 'blue', 'green', 'grey'],
+           data: [1,3,5,10]
+          }
+        ], 
+     } 
     })
   }
 
