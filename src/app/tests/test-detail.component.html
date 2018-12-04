@@ -65,21 +65,20 @@
 </button>
   </div>
   <div class='card-steps' *ngIf='showSteps'>
-    <div class='row'>
-      <div class='col-md-8'>
-        <div class='row'>
-          <div class='col-md-4'>steps:</div>
-          <div class='col-md-8'>expected results:</div>
-        </div>
-        <div class='row'>
-          <div class='col-md-4'>{{steps.step1}}</div>
-          <div class='col-md-8'>{{steps.result1}}</div>
-        </div>
-        <div class='row'>
-          <div class='col-md-4'>{{steps.step2}}</div>
-          <div class='col-md-8'>{{steps.result2}}</div>
-        </div>
-
-      </div>
-  </div>
+      <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th spoce="col">#</th>
+              <th scope="col">STEPS</th>
+              <th scope="col">EXPECTED RESULT</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr  *ngFor = 'let action of steps.actions'>
+                <th scope="row">{{action.id}}</th>
+                <td scope="row">{{action.singleStep}}</td>
+                <td scope="row">{{action.resultOfStep}}</td>
+              </tr>
+          </tbody>
+      </table>  
 </div>
