@@ -11,21 +11,34 @@ export class PresentationComponent implements OnInit {
 
   automatedBySprintChart = [];
   loginAuthenticationChart = [];
-  imageProviderChar = [];
+  automatedAndNotAutomated = [];
   constructor() { }
   
 
   ngOnInit() {
+    this.loginAuthenticationChart = new Chart('dailyResults', {
+      type: 'pie',
+      data: {
+        labels: ['passed','failed','not run'],
+        datasets: [
+          {
+            label: 'LoginProvider',
+            backgroundColor: ['green', 'red', 'blue'],
+            data: [10,3,2]
+          }
+        ], 
+      } 
+    })
       this.automatedBySprintChart = new Chart('automatedBySprintChart', {
       type: 'line',
       data: {
-        labels: ['a','b','c','d','e','f','g','h'],
+        labels: ['SP20','SP21','SP22','SP23','SP24','SP26','SP27','SP28'],
         datasets: [
           {
-            label: 'My first dataset',
-            data: [1,3,5,10,56,65,35,543,543,543],
-            backgroundColor: 'red',
-            borderColor: 'red',
+            label: 'Number of automated tests',
+            data: [1,3,5,7,9,10,11,13,14,15],
+            backgroundColor: '#8A2BE2',
+            borderColor: '#8A2BE2',
             fill: false,
           }
         ], 
@@ -34,24 +47,24 @@ export class PresentationComponent implements OnInit {
     this.loginAuthenticationChart = new Chart('loginAuthenticationChart', {
       type: 'pie',
       data: {
-        labels: ['a','b','c','d'],
+        labels: ['passed','failed','active','not run'],
         datasets: [
           {
-            label: 'My first DP',
-            backgroundColor: ['red', 'blue', 'green', 'grey'],
+            label: 'LoginProvider',
+            backgroundColor: ['green', 'red', 'blue'],
             data: [1,3,5,10]
           }
         ], 
       } 
     })
-    this.imageProviderChar = new Chart('imageProviderChart', {
-     type: 'pie',
+    this.automatedAndNotAutomated = new Chart('automatedAndNotAutomatedChart', {
+     type: 'doughnut',
       data: {
-       labels: ['a','b','c','d'],
+       labels: ['automated','not-automated','planed','unplaned'],
        datasets: [
          {
            label: 'My first DP',
-           backgroundColor: ['red', 'blue', 'green', 'grey'],
+           backgroundColor: ['#008000', '#B22222', '#ADFF2F', 'grey'],
            data: [1,3,5,10]
           }
         ], 
