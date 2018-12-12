@@ -10,6 +10,7 @@ import { catchError, tap, map } from 'rxjs/operators';
 export class testService{
 
   private testUrl = 'api/tests/tests.json'
+  private testsResults : string[];
   constructor(private http : HttpClient) {
   }
     gettests(): Observable<Itest[]>{

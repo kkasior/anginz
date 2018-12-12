@@ -1,3 +1,18 @@
 .btn-primary{
     float: right;
 }
+.testName{
+    float: left;
+}
+.Passed{
+    color: green;
+    float: right;
+}
+.Failed{
+    color: red;
+    float: right;
+}
+.Active{
+    color: #337AB7;
+    float: right;
+}

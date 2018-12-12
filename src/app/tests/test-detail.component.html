@@ -1,9 +1,9 @@
 <div class='card'
      *ngIf='test'>
   <div class='card-header'>
-    {{test.testName}}
+    <div class='testName'>{{test.testName}}</div>
+    <div class="{{test.testStatus}}">{{test.testStatus}}</div>
   </div>
-
   <div class='card-body'>
     <table class="table table-bordered">
       <thead>

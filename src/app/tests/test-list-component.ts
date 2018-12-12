@@ -11,9 +11,6 @@ import { stringify } from "@angular/core/src/util";
 })
 export class testListComponent implements OnInit{
     pageTitle : string = "Test list";
-    imageWidth : number = 50;
-    imageMargin : number = 2;
-    showImage : boolean = false;
     filteredtests: Itest[];
     errorMessage : string;
     
@@ -31,9 +28,7 @@ export class testListComponent implements OnInit{
     }
 
     tests: Itest[];
-    toggleImage() : void {
-        this.showImage = !this.showImage;
-    }
+    
     ngOnInit(): void {
         this.testService.gettests().subscribe(
             tests => {
@@ -41,7 +36,8 @@ export class testListComponent implements OnInit{
                 this.filteredtests = this.tests;  
             },
             error => this.errorMessage = <any>error
-        )     
+        )
+             
     }
     perfromFilter(filterBy : string ) : Itest[] {
         filterBy = filterBy.toLocaleLowerCase();
@@ -50,5 +46,8 @@ export class testListComponent implements OnInit{
     }
     onRatingClicked(message : string){
         this.pageTitle = message;
+    }
+    displayStatus() : void{
+        console.log(this.testService.gettest);
     }
 }

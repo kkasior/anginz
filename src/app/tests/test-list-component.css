@@ -1,3 +1,12 @@
 thead{
     color: #337AB7
 }
+.Passed{
+    color: green;
+}
+.Failed{
+    color: red;
+}
+.Active{
+    color:#337AB7;
+}
