@@ -19,7 +19,7 @@ export class PresentationComponent implements OnInit {
     this.loginAuthenticationChart = new Chart('dailyResults', {
       type: 'pie',
       data: {
-        labels: ['passed','failed','not run'],
+        labels: ['pozytywne','negatyne','nie zweryfikowane'],
         datasets: [
           {
             label: 'LoginProvider',
@@ -35,7 +35,7 @@ export class PresentationComponent implements OnInit {
         labels: ['SP20','SP21','SP22','SP23','SP24','SP26','SP27','SP28'],
         datasets: [
           {
-            label: 'Number of automated tests',
+            label: 'Liczba zautomatyzowanych testów',
             data: [1,3,5,7,9,10,11,13,14,15],
             backgroundColor: '#8A2BE2',
             borderColor: '#8A2BE2',
@@ -47,7 +47,7 @@ export class PresentationComponent implements OnInit {
     this.loginAuthenticationChart = new Chart('loginAuthenticationChart', {
       type: 'pie',
       data: {
-        labels: ['passed','failed','active','not run'],
+        labels: ['pozytywne','negatywne','aktywne','nie zweryfikowane'],
         datasets: [
           {
             label: 'LoginProvider',
@@ -60,7 +60,7 @@ export class PresentationComponent implements OnInit {
     this.automatedAndNotAutomated = new Chart('automatedAndNotAutomatedChart', {
      type: 'doughnut',
       data: {
-       labels: ['automated','not-automated','planed','unplaned'],
+       labels: ['zautomatyzowane','niezautomatyzowane','zaplanowane','niezaplanowane'],
        datasets: [
          {
            label: 'My first DP',

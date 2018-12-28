@@ -4,8 +4,8 @@
       "actions": [
         { "id": 1, "singleStep": "Open Blog Page (www.testingblog.com)", "resultOfStep": "Blog Page is opened, user is able to see list of latest posts"},
         { "id": 2, "singleStep": "Select first post from post list – click post’s title", "resultOfStep": "User is successfully redirected to selected post’s page"},
-        { "id": 3, "singleStep": "Scroll down to “Leave a Reply“ section", "resultOfStep": "Leave a Reply” section is visible and form of adding a comment is visible as wel"},
-        { "id": 4, "singleStep": "In “Comment” text box, type comment content – could be “message from UI test", "resultOfStep": "“Leave a Reply” section is visible and form of adding a comment is visible as well"},
+        { "id": 3, "singleStep": "Scroll down to “Leave a Reply“ section", "resultOfStep": "Leave a Reply” section is visible and form of adding a comment is visible as well"},
+        { "id": 4, "singleStep": "In “Comment” text box, type comment content – could be “message from UI test", "resultOfStep": "Typed text is visible inside “Comment” text field,"},
         { "id": 5, "singleStep": "In “Name” text box, type name of user – could be “Test User”", "resultOfStep": "Typed name is visible inside “Name” text field"},
         { "id": 6, "singleStep": "In “Email” text box, type email address of user – could be testuser@email.com", "resultOfStep": "Typed email is visible inside “Email” text field"},
         { "id": 7, "singleStep": "Click on red, “Post Comment” button to finish commenting", "resultOfStep": "Current page should be refreshed"},
